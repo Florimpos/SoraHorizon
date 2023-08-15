@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+    <script src="gallery.js"></script>
+    <header>
+        <h1>SoraHorizon</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Bienvenue sur SoraHorizon !</h2>
+            <p>Découvrez des informations passionnantes et des ressources utiles.</p>
+            <a href="a-propos.html" class="cta-button">En savoir plus</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature">
+                <h3>Articles Récents</h3>
+                <p>Découvrez nos derniers articles sur des sujets variés.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>Ressources</h3>
+                <p>Trouvez des guides, des vidéos et d'autres ressources utiles.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>Événements à Venir</h3>
+                <p>Restez informé sur les événements passionnants à venir.</p>
+            </div>
+        </section>
+        
+        <section class="newsletter hidden">
+            <h3>Inscrivez-vous à notre newsletter</h3>
+            <p>Recevez les dernières mises à jour directement dans votre boîte de réception.</p>
+            <form action="inscription-newsletter.php" method="POST">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+        
+        <section class="more-info animate__animated animate__swing">
+            <h3>Plus d'Informations</h3>
+            <p>Découvrez encore plus d'informations fascinantes sur notre site.</p>
+            <ul>
+                <li><a href="#">Articles sur le Manga</a></li>
+                <li><a href="#">Guides pour les Débutants</a></li>
+                <li><a href="#">Événements Passés</a></li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            <h3>Galerie</h3>
+            <p>Explorez notre galerie d'images et d'illustrations inspirantes.</p>
+            <div class="image-container">
+                <button class="prev-button">&lt;</button>
+                <img src="https://valence-albigeois-pom.c3rb.org/images/One_piece.jpg" alt="Image 1" class="gallery-image">
+                <button class="next-button">&gt;</button>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h3>Contactez-nous</h3>
+            <p>Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.</p>
+            <form action="traitement-formulaire.php" method="POST">
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Adresse e-mail" required>
+                <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        
+        <section class="social-media">
+            <h3>Restez Connecté</h3>
+            <p>Suivez-nous sur les réseaux sociaux pour les dernières mises à jour et actualités.</p>
+            <ul<ul class="social-links"></ul>>
+                <li><a href="#" class="social-link">Facebook</a></li>
+                <li><a href="#" class="social-link">Twitter</a></li>
+                <li><a href="https://www.instagram.com/beckerichf/" class="social-link">Instagram</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SoraHorizon</div>
+            <ul class="footer-links">
+                <h3>Informations de Contact</h3><br/>
+            <li><strong>Adresse :</strong> 123 Rue Manga, Ville Manga</li>
+            <li><strong>Téléphone :</strong> 123-456-7890</li>
+            <li><strong>Adresse e-mail :</strong> contact@monsite.com</li>
+        </ul><br/>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2023 SoraHorizon. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
