@@ -1,0 +1,688 @@
+/* Reset des marges et des paddings pour une mise en page propre */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Police de caractères personnalisée pour un style manga */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* En-tête du site */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff4444;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+/* Section "hero" */
+.hero {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff4444;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ff6666;
+    transform: scale(1.05);
+}
+
+/* Section "features" */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ff4444;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    border-color: #ff6666;
+}
+
+/* Section "newsletter" */
+.newsletter {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.newsletter h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.newsletter p {
+    margin-bottom: 30px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.newsletter button {
+    background-color: #ff4444;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background-color: #ff6666;
+    transform: scale(1.05);
+}
+/* Cacher la section newsletter par défaut */
+.newsletter.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s, max-height 0.3s;
+}
+
+/* Animation de survol */
+.newsletter:hover {
+    opacity: 1;
+    max-height: 1000px; /* Ajustez cette valeur selon votre contenu */
+    transition: opacity 0.3s, max-height 0.3s;
+}
+/* Section "more-info" */
+/* Section "more-info" avec animation swing en arrière-plan */
+.more-info {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.more-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #9f0f0f, #e8c2c2);
+    opacity: 0.8;
+    transform: skewY(-3deg);
+    z-index: -1;
+    animation: swingAnimation 5s infinite;
+}
+
+@keyframes swingAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.more-info h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+    color: #f1ecec;
+}   
+
+.more-info p {
+    font-family: 'Comic Sans MS', cursive;
+    margin-bottom: 30px;
+    color: #141313;
+}
+
+.more-info ul {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.more-info ul li {
+    margin: 0 15px;
+}
+
+.more-info ul li a {
+    color: #f8f2f2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.more-info ul li a:hover {
+    color: #ff6666;
+}
+
+.more-info .visual-element {
+    margin-top: 50px;
+    position: relative;
+}
+
+.visual-element img {
+    max-width: 100%;
+    border: 4px solid #ff4444;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 68, 68, 0.8);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.visual-element img:hover {
+    transform: scale(1.05);
+    border-color: #ff6666;
+    box-shadow: 0px 0px 20px rgba(255, 68, 68, 0.8);
+}
+
+/* Section "gallery" */
+.gallery {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.image-containeer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Colonne flexible avec largeur minimale de 300px */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item p {
+    margin-top: 10px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.gallery-image {
+    max-width: 100%;
+    margin: 0 10px;
+    border: 2px solid #ff4444;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.prev-button,
+.next-button {
+    background-color: transparent;
+    border: none;
+    color: #ff4444;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 10px;
+    outline: none;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    color: #ff6666;
+    transform: scale(1.1);
+}
+
+.prev-button {
+    position: absolute;
+    left: 0;
+}
+
+.next-button {
+    position: absolute;
+    right: 0;
+}
+
+
+/* Section "contact" */
+.contact {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.contact p {
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.contact button {
+    background-color: #ff4444;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact button:hover {
+    background-color: #ff6666;
+    transform: scale(1.05);
+}
+.success-message {
+    color: green;
+    font-weight: bold;
+    display: none;
+}
+
+
+/* Section "social-media" */
+.social-media {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-media h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.social-media p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    color: #ff4444;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    color: #ff6666;
+}
+
+/* Styles pour la section "À Propos" */
+.about {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styles pour la section "Équipe" */
+.team {
+    background-image: url("https://img2.wallspic.com/crops/4/0/4/2/7/172404/172404-votre_nom-mitsuha_miyamizu-taki_tachibana-lanime-atmosphere-7680x4320.jpg");
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.team h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.member {
+    margin: 20px;
+}
+
+.member img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.member h4 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.member p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styles pour la section "Mission" */
+.mission {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.mission h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.mission p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Ajout d'animations */
+/* Animation pour les boutons au survol */
+.cta-button,
+.feature,
+.newsletter button,
+.contact button {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cta-button:hover,
+.feature:hover,
+.newsletter button:hover,
+.contact button:hover {
+    background-color: #ff6666;
+    transform: scale(1.05);
+}
+
+/* Animation pour les images de la galerie au survol */
+.image-container img {
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    border-color: #ff6666;
+}
+
+/* Animation pour le texte "Plus d'Informations" */
+.more-info h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.more-info h3::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff4444;
+    bottom: -10px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.more-info h3:hover::before {
+    transform: scaleX(1);
+}
+
+/* Animation de fond pour la section "social-media" */
+.social-media {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-media::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #159995 0%, #ff6666 100%);
+    opacity: 0.5;
+    transform: skewY(-10deg);
+    animation: gradientAnimation 8s linear infinite alternate;
+    pointer-events: none; /* Ajout de cette ligne pour désactiver les interactions avec le fond animé */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        transform: skewY(-10deg) translateX(-100%);
+    }
+    100% {
+        transform: skewY(-10deg) translateX(100%);
+    }
+}
+/* Section "products" */
+.products {
+    display: flex;
+    background-color: #050505;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.product {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f5f5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.price {
+    font-size: 20px;
+    color: #ff4444;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #ff4444;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+    background-color: #ff6666;
+}
+
+
+/* Pied de page */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 0;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+    }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6666;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff6666;
+}
+
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social-icons a:hover {
+    color: #ff6666;
+}
